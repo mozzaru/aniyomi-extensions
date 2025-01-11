@@ -2,20 +2,20 @@
 
 just paste this into your anime repo 
 ```
-https://raw.githubusercontent.com/Kohi-den/extensions/main/index.min.json
+https://raw.githubusercontent.com/aniku-app/extensions/main/index.min.json
 ```
 
 ## Support Server
 
-Join the [Discord](https://discord.gg/vut4mmXQzU) for updates and announcements
+Join the [Discord](https://discord.gg/85jB7V5AJR) for updates and announcements
 
 and please check the discord BEFORE making an issue
 
 ## Contributing
 
-[Source code](https://github.com/Kohi-den/extensions-source) and [Template](https://github.com/aniyomiorg/aniyomi-extensions/blob/master/CONTRIBUTING.md)
+[Source code](https://github.com/aniku-app/aniku-extensions) and [Template](https://github.com/aniku-app/aniku-extensions/blob/master/CONTRIBUTING.md)
 
-If you want to report issues, report them [here](https://github.com/Kohi-den/extensions-source/issues/new/choose)
+If you want to report issues, report them [here](https://github.com/aniku-app/aniku-extensions/issues/new/choose)
 
 ## Disclaimer
 
