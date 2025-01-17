@@ -2,7 +2,7 @@
 
 just paste this into your anime repo 
 ```
-https://raw.githubusercontent.com/aniku-app/extensions/main/index.min.json
+https://raw.githubusercontent.com/anikku-app/extensions/main/index.min.json
 ```
 
 ## Support Server
@@ -13,9 +13,9 @@ and please check the discord BEFORE making an issue
 
 ## Contributing
 
-[Source code](https://github.com/aniku-app/aniku-extensions) and [Template](https://github.com/aniku-app/aniku-extensions/blob/master/CONTRIBUTING.md)
+[Source code](https://github.com/anikku-app/anikku-extensions) and [Template](https://github.com/anikku-app/anikku-extensions/blob/master/CONTRIBUTING.md)
 
-If you want to report issues, report them [here](https://github.com/aniku-app/aniku-extensions/issues/new/choose)
+If you want to report issues, report them [here](https://github.com/anikku-app/anikku-extensions/issues/new/choose)
 
 ## Disclaimer
 
