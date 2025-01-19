@@ -2,7 +2,7 @@
 
 just paste this into your anime repo 
 ```
-https://raw.githubusercontent.com/anikku-app/extensions/main/index.min.json
+https://raw.githubusercontent.com/anikku-app/extensions/repo/index.min.json
 ```
 
 ## Support Server
