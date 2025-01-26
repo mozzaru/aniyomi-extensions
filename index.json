@@ -236,6 +236,40 @@
     ]
   },
   {
+    "name": "Aniyomi: Jable",
+    "pkg": "eu.kanade.tachiyomi.animeextension.all.jable",
+    "apk": "aniyomi-all.jable-v14.2.apk",
+    "lang": "all",
+    "code": 2,
+    "version": "14.2",
+    "nsfw": 1,
+    "hasReadme": 0,
+    "hasChangelog": 0,
+    "sources": [
+      {
+        "name": "Jable",
+        "lang": "zh",
+        "id": "4927468808524123411",
+        "baseUrl": "https://jable.tv",
+        "versionId": 1
+      },
+      {
+        "name": "Jable",
+        "lang": "en",
+        "id": "889668913079212135",
+        "baseUrl": "https://jable.tv",
+        "versionId": 1
+      },
+      {
+        "name": "Jable",
+        "lang": "ja",
+        "id": "7335707215680841826",
+        "baseUrl": "https://jable.tv",
+        "versionId": 1
+      }
+    ]
+  },
+  {
     "name": "Aniyomi: JavGG",
     "pkg": "eu.kanade.tachiyomi.animeextension.all.javgg",
     "apk": "aniyomi-all.javgg-v14.3.apk",
@@ -345,6 +379,67 @@
         "lang": "all",
         "id": "168969881246615628",
         "baseUrl": "https://missav.ai",
+        "versionId": 1
+      }
+    ]
+  },
+  {
+    "name": "Aniyomi: RouVideo",
+    "pkg": "eu.kanade.tachiyomi.animeextension.all.rouvideo",
+    "apk": "aniyomi-all.rouvideo-v14.1.apk",
+    "lang": "all",
+    "code": 1,
+    "version": "14.1",
+    "nsfw": 1,
+    "hasReadme": 0,
+    "hasChangelog": 0,
+    "sources": [
+      {
+        "name": "肉視頻",
+        "lang": "all",
+        "id": "7323052797979930552",
+        "baseUrl": "https://rou.video/home",
+        "versionId": 1
+      },
+      {
+        "name": "肉視頻",
+        "lang": "zh",
+        "id": "6055459097979921364",
+        "baseUrl": "https://rou.video/home",
+        "versionId": 1
+      },
+      {
+        "name": "肉視頻",
+        "lang": "en",
+        "id": "1757861758959207324",
+        "baseUrl": "https://rou.video/home",
+        "versionId": 1
+      },
+      {
+        "name": "肉視頻",
+        "lang": "vi",
+        "id": "8210438569455151012",
+        "baseUrl": "https://rou.video/home",
+        "versionId": 1
+      }
+    ]
+  },
+  {
+    "name": "Aniyomi: Subsplease",
+    "pkg": "eu.kanade.tachiyomi.animeextension.all.subsplease",
+    "apk": "aniyomi-all.subsplease-v14.2.apk",
+    "lang": "all",
+    "code": 2,
+    "version": "14.2",
+    "nsfw": 0,
+    "hasReadme": 0,
+    "hasChangelog": 0,
+    "sources": [
+      {
+        "name": "Subsplease",
+        "lang": "all",
+        "id": "8766955949256845198",
+        "baseUrl": "https://subsplease.org",
         "versionId": 1
       }
     ]
@@ -1326,10 +1421,10 @@
   {
     "name": "Aniyomi: AnimeOwl",
     "pkg": "eu.kanade.tachiyomi.animeextension.en.animeowl",
-    "apk": "aniyomi-en.animeowl-v14.20.apk",
+    "apk": "aniyomi-en.animeowl-v14.21.apk",
     "lang": "en",
-    "code": 20,
-    "version": "14.20",
+    "code": 21,
+    "version": "14.21",
     "nsfw": 0,
     "hasReadme": 0,
     "hasChangelog": 0,
@@ -1338,7 +1433,7 @@
         "name": "AnimeOwl",
         "lang": "en",
         "id": "6489797158672074908",
-        "baseUrl": "https://animeowl.us",
+        "baseUrl": "https://animeowl.live",
         "versionId": 1
       }
     ]
@@ -1346,10 +1441,10 @@
   {
     "name": "Aniyomi: AnimePahe",
     "pkg": "eu.kanade.tachiyomi.animeextension.en.animepahe",
-    "apk": "aniyomi-en.animepahe-v14.28.apk",
+    "apk": "aniyomi-en.animepahe-v14.29.apk",
     "lang": "en",
-    "code": 28,
-    "version": "14.28",
+    "code": 29,
+    "version": "14.29",
     "nsfw": 0,
     "hasReadme": 0,
     "hasChangelog": 0,
@@ -1746,10 +1841,10 @@
   {
     "name": "Aniyomi: Kaido",
     "pkg": "eu.kanade.tachiyomi.animeextension.en.kaido",
-    "apk": "aniyomi-en.kaido-v14.10.apk",
+    "apk": "aniyomi-en.kaido-v14.11.apk",
     "lang": "en",
-    "code": 10,
-    "version": "14.10",
+    "code": 11,
+    "version": "14.11",
     "nsfw": 0,
     "hasReadme": 0,
     "hasChangelog": 0,
@@ -2326,10 +2421,10 @@
   {
     "name": "Aniyomi: HiAnime",
     "pkg": "eu.kanade.tachiyomi.animeextension.en.zoro",
-    "apk": "aniyomi-en.zoro-v14.45.apk",
+    "apk": "aniyomi-en.zoro-v14.47.apk",
     "lang": "en",
-    "code": 45,
-    "version": "14.45",
+    "code": 47,
+    "version": "14.47",
     "nsfw": 0,
     "hasReadme": 0,
     "hasChangelog": 0,
@@ -3961,10 +4056,10 @@
   {
     "name": "Aniyomi: Anime Saturn",
     "pkg": "eu.kanade.tachiyomi.animeextension.it.animesaturn",
-    "apk": "aniyomi-it.animesaturn-v14.8.apk",
+    "apk": "aniyomi-it.animesaturn-v14.9.apk",
     "lang": "it",
-    "code": 8,
-    "version": "14.8",
+    "code": 9,
+    "version": "14.9",
     "nsfw": 0,
     "hasReadme": 0,
     "hasChangelog": 0,
@@ -3973,7 +4068,7 @@
         "name": "AnimeSaturn",
         "lang": "it",
         "id": "1863212142777957799",
-        "baseUrl": "https://animesaturn.in",
+        "baseUrl": "https://anisaturn.com",
         "versionId": 1
       }
     ]
@@ -4541,10 +4636,10 @@
   {
     "name": "Aniyomi: Anitube",
     "pkg": "eu.kanade.tachiyomi.animeextension.pt.anitube",
-    "apk": "aniyomi-pt.anitube-v14.20.apk",
+    "apk": "aniyomi-pt.anitube-v14.22.apk",
     "lang": "pt-BR",
-    "code": 20,
-    "version": "14.20",
+    "code": 22,
+    "version": "14.22",
     "nsfw": 0,
     "hasReadme": 0,
     "hasChangelog": 0,
