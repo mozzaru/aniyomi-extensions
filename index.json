@@ -4916,10 +4916,10 @@
   {
     "name": "Aniyomi: Pobreflix",
     "pkg": "eu.kanade.tachiyomi.animeextension.pt.pobreflix",
-    "apk": "aniyomi-pt.pobreflix-v14.18.apk",
+    "apk": "aniyomi-pt.pobreflix-v14.19.apk",
     "lang": "pt-BR",
-    "code": 18,
-    "version": "14.18",
+    "code": 19,
+    "version": "14.19",
     "nsfw": 1,
     "hasReadme": 0,
     "hasChangelog": 0,
