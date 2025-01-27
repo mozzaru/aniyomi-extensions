@@ -427,10 +427,10 @@
   {
     "name": "Aniyomi: Subsplease",
     "pkg": "eu.kanade.tachiyomi.animeextension.all.subsplease",
-    "apk": "aniyomi-all.subsplease-v14.2.apk",
+    "apk": "aniyomi-all.subsplease-v14.3.apk",
     "lang": "all",
-    "code": 2,
-    "version": "14.2",
+    "code": 3,
+    "version": "14.3",
     "nsfw": 0,
     "hasReadme": 0,
     "hasChangelog": 0,
@@ -1521,10 +1521,10 @@
   {
     "name": "Aniyomi: AniPlay",
     "pkg": "eu.kanade.tachiyomi.animeextension.en.aniplay",
-    "apk": "aniyomi-en.aniplay-v14.12.apk",
+    "apk": "aniyomi-en.aniplay-v14.13.apk",
     "lang": "en",
-    "code": 12,
-    "version": "14.12",
+    "code": 13,
+    "version": "14.13",
     "nsfw": 0,
     "hasReadme": 0,
     "hasChangelog": 0,
@@ -1561,10 +1561,10 @@
   {
     "name": "Aniyomi: AsianLoad",
     "pkg": "eu.kanade.tachiyomi.animeextension.en.asianload",
-    "apk": "aniyomi-en.asianload-v14.46.apk",
+    "apk": "aniyomi-en.asianload-v14.47.apk",
     "lang": "en",
-    "code": 46,
-    "version": "14.46",
+    "code": 47,
+    "version": "14.47",
     "nsfw": 0,
     "hasReadme": 0,
     "hasChangelog": 0,
@@ -1573,7 +1573,7 @@
         "name": "AsianLoad",
         "lang": "en",
         "id": "2063258341485460293",
-        "baseUrl": "https://draplay.info",
+        "baseUrl": "https://embasic.pro",
         "versionId": 1
       }
     ]
@@ -1994,6 +1994,26 @@
         "lang": "en",
         "id": "1480485712825107891",
         "baseUrl": "https://luciferdonghua.in",
+        "versionId": 1
+      }
+    ]
+  },
+  {
+    "name": "Aniyomi: MoviesMod",
+    "pkg": "eu.kanade.tachiyomi.animeextension.en.moviesmod",
+    "apk": "aniyomi-en.moviesmod-v14.1.apk",
+    "lang": "en",
+    "code": 1,
+    "version": "14.1",
+    "nsfw": 0,
+    "hasReadme": 0,
+    "hasChangelog": 0,
+    "sources": [
+      {
+        "name": "Movies Mod",
+        "lang": "en",
+        "id": "2828515480418041073",
+        "baseUrl": "https://moviesmod.cash",
         "versionId": 1
       }
     ]
@@ -4096,10 +4116,10 @@
   {
     "name": "Aniyomi: ANIMEWORLD.tv",
     "pkg": "eu.kanade.tachiyomi.animeextension.it.animeworld",
-    "apk": "aniyomi-it.animeworld-v14.44.apk",
+    "apk": "aniyomi-it.animeworld-v14.45.apk",
     "lang": "it",
-    "code": 44,
-    "version": "14.44",
+    "code": 45,
+    "version": "14.45",
     "nsfw": 0,
     "hasReadme": 0,
     "hasChangelog": 0,
