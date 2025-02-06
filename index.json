@@ -4108,7 +4108,7 @@
         "name": "AnimeUnity",
         "lang": "it",
         "id": "7762808921754601430",
-        "baseUrl": "https://www.animeunity.to",
+        "baseUrl": "https://www.animeunity.so",
         "versionId": 1
       }
     ]
@@ -4556,10 +4556,10 @@
   {
     "name": "Aniyomi: AnimesOnlineVip",
     "pkg": "eu.kanade.tachiyomi.animeextension.pt.animesonlinevip",
-    "apk": "aniyomi-pt.animesonlinevip-v14.1.apk",
+    "apk": "aniyomi-pt.animesonlinevip-v14.2.apk",
     "lang": "pt-BR",
-    "code": 1,
-    "version": "14.1",
+    "code": 2,
+    "version": "14.2",
     "nsfw": 1,
     "hasReadme": 0,
     "hasChangelog": 0,
@@ -4568,7 +4568,7 @@
         "name": "Animes Online Vip",
         "lang": "pt-BR",
         "id": "533096643049014020",
-        "baseUrl": "https://animesonlinehd.vip",
+        "baseUrl": "https://animesonline.red",
         "versionId": 1
       }
     ]
@@ -4629,26 +4629,6 @@
         "lang": "pt-BR",
         "id": "3010449287201563287",
         "baseUrl": "https://api2.animestc.com",
-        "versionId": 1
-      }
-    ]
-  },
-  {
-    "name": "Aniyomi: AnimesZone",
-    "pkg": "eu.kanade.tachiyomi.animeextension.pt.animeszone",
-    "apk": "aniyomi-pt.animeszone-v14.12.apk",
-    "lang": "pt-BR",
-    "code": 12,
-    "version": "14.12",
-    "nsfw": 1,
-    "hasReadme": 0,
-    "hasChangelog": 0,
-    "sources": [
-      {
-        "name": "AnimesZone",
-        "lang": "pt-BR",
-        "id": "7465937896816422886",
-        "baseUrl": "https://animeszone.net",
         "versionId": 1
       }
     ]
@@ -5283,10 +5263,10 @@
   {
     "name": "Aniyomi: Hanime1",
     "pkg": "eu.kanade.tachiyomi.animeextension.zh.hanime1",
-    "apk": "aniyomi-zh.hanime1-v14.1.apk",
+    "apk": "aniyomi-zh.hanime1-v14.3.apk",
     "lang": "zh",
-    "code": 1,
-    "version": "14.1",
+    "code": 3,
+    "version": "14.3",
     "nsfw": 1,
     "hasReadme": 0,
     "hasChangelog": 0,
@@ -5296,6 +5276,46 @@
         "lang": "zh",
         "id": "2853734405579058222",
         "baseUrl": "https://hanime1.me",
+        "versionId": 1
+      }
+    ]
+  },
+  {
+    "name": "Aniyomi: iyf",
+    "pkg": "eu.kanade.tachiyomi.animeextension.zh.iyf",
+    "apk": "aniyomi-zh.iyf-v14.1.apk",
+    "lang": "zh",
+    "code": 1,
+    "version": "14.1",
+    "nsfw": 0,
+    "hasReadme": 0,
+    "hasChangelog": 0,
+    "sources": [
+      {
+        "name": "爱壹帆",
+        "lang": "zh",
+        "id": "3164438094592800620",
+        "baseUrl": "https://www.iyf.tv",
+        "versionId": 1
+      }
+    ]
+  },
+  {
+    "name": "Aniyomi: Nivod",
+    "pkg": "eu.kanade.tachiyomi.animeextension.zh.nivod",
+    "apk": "aniyomi-zh.nivod-v14.1.apk",
+    "lang": "zh",
+    "code": 1,
+    "version": "14.1",
+    "nsfw": 0,
+    "hasReadme": 0,
+    "hasChangelog": 0,
+    "sources": [
+      {
+        "name": "泥视频",
+        "lang": "zh",
+        "id": "1182396933972053592",
+        "baseUrl": "https://www.nivod.cc",
         "versionId": 1
       }
     ]
