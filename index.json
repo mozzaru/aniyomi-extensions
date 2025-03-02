@@ -2561,10 +2561,10 @@
   {
     "name": "Aniyomi: AsiaLiveAction",
     "pkg": "eu.kanade.tachiyomi.animeextension.es.asialiveaction",
-    "apk": "aniyomi-es.asialiveaction-v14.35.apk",
+    "apk": "aniyomi-es.asialiveaction-v14.36.apk",
     "lang": "es",
-    "code": 35,
-    "version": "14.35",
+    "code": 36,
+    "version": "14.36",
     "nsfw": 0,
     "hasReadme": 0,
     "hasChangelog": 0,
@@ -3188,10 +3188,10 @@
   {
     "name": "Aniyomi: Pandrama",
     "pkg": "eu.kanade.tachiyomi.animeextension.es.pandrama",
-    "apk": "aniyomi-es.pandrama-v14.1.apk",
+    "apk": "aniyomi-es.pandrama-v14.2.apk",
     "lang": "es",
-    "code": 1,
-    "version": "14.1",
+    "code": 2,
+    "version": "14.2",
     "nsfw": 0,
     "hasReadme": 0,
     "hasChangelog": 0,
@@ -3456,10 +3456,10 @@
   {
     "name": "Aniyomi: Anime-Sama",
     "pkg": "eu.kanade.tachiyomi.animeextension.fr.animesama",
-    "apk": "aniyomi-fr.animesama-v14.10.apk",
+    "apk": "aniyomi-fr.animesama-v14.11.apk",
     "lang": "fr",
-    "code": 10,
-    "version": "14.10",
+    "code": 11,
+    "version": "14.11",
     "nsfw": 0,
     "hasReadme": 0,
     "hasChangelog": 0,
@@ -3536,10 +3536,10 @@
   {
     "name": "Aniyomi: FrAnime",
     "pkg": "eu.kanade.tachiyomi.animeextension.fr.franime",
-    "apk": "aniyomi-fr.franime-v14.16.apk",
+    "apk": "aniyomi-fr.franime-v14.17.apk",
     "lang": "fr",
-    "code": 16,
-    "version": "14.16",
+    "code": 17,
+    "version": "14.17",
     "nsfw": 1,
     "hasReadme": 0,
     "hasChangelog": 0,
@@ -4149,6 +4149,26 @@
         "lang": "pl",
         "id": "5996410160070658951",
         "baseUrl": "https://desu-online.pl",
+        "versionId": 1
+      }
+    ]
+  },
+  {
+    "name": "Aniyomi: Docchi",
+    "pkg": "eu.kanade.tachiyomi.animeextension.pl.docchi",
+    "apk": "aniyomi-pl.docchi-v14.2.apk",
+    "lang": "pl",
+    "code": 2,
+    "version": "14.2",
+    "nsfw": 1,
+    "hasReadme": 0,
+    "hasChangelog": 0,
+    "sources": [
+      {
+        "name": "Docchi",
+        "lang": "pl",
+        "id": "594564153449456404",
+        "baseUrl": "https://docchi.pl",
         "versionId": 1
       }
     ]
@@ -5003,10 +5023,10 @@
   {
     "name": "Aniyomi: AsyaAnimeleri",
     "pkg": "eu.kanade.tachiyomi.animeextension.tr.asyaanimeleri",
-    "apk": "aniyomi-tr.asyaanimeleri-v14.8.apk",
+    "apk": "aniyomi-tr.asyaanimeleri-v14.9.apk",
     "lang": "tr",
-    "code": 8,
-    "version": "14.8",
+    "code": 9,
+    "version": "14.9",
     "nsfw": 0,
     "hasReadme": 0,
     "hasChangelog": 0,
@@ -5103,10 +5123,10 @@
   {
     "name": "Aniyomi: Türk Anime TV",
     "pkg": "eu.kanade.tachiyomi.animeextension.tr.turkanime",
-    "apk": "aniyomi-tr.turkanime-v14.35.apk",
+    "apk": "aniyomi-tr.turkanime-v14.36.apk",
     "lang": "tr",
-    "code": 35,
-    "version": "14.35",
+    "code": 36,
+    "version": "14.36",
     "nsfw": 0,
     "hasReadme": 0,
     "hasChangelog": 0,
