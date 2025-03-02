@@ -2241,10 +2241,10 @@
   {
     "name": "Aniyomi: Animefenix",
     "pkg": "eu.kanade.tachiyomi.animeextension.es.animefenix",
-    "apk": "aniyomi-es.animefenix-v14.57.apk",
+    "apk": "aniyomi-es.animefenix-v14.59.apk",
     "lang": "es",
-    "code": 57,
-    "version": "14.57",
+    "code": 59,
+    "version": "14.59",
     "nsfw": 0,
     "hasReadme": 0,
     "hasChangelog": 0,
@@ -2253,7 +2253,7 @@
         "name": "AnimeFenix",
         "lang": "es",
         "id": "1901838936011764172",
-        "baseUrl": "https://www3.animefenix.tv",
+        "baseUrl": "https://animefenix2.tv",
         "versionId": 1
       }
     ]
@@ -3636,10 +3636,10 @@
   {
     "name": "Aniyomi: AniSAGA",
     "pkg": "eu.kanade.tachiyomi.animeextension.hi.animesaga",
-    "apk": "aniyomi-hi.animesaga-v14.17.apk",
+    "apk": "aniyomi-hi.animesaga-v14.18.apk",
     "lang": "hi",
-    "code": 17,
-    "version": "14.17",
+    "code": 18,
+    "version": "14.18",
     "nsfw": 0,
     "hasReadme": 0,
     "hasChangelog": 0,
