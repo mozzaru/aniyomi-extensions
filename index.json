@@ -1479,26 +1479,6 @@
     ]
   },
   {
-    "name": "Aniyomi: AsianLoad",
-    "pkg": "eu.kanade.tachiyomi.animeextension.en.asianload",
-    "apk": "aniyomi-en.asianload-v14.48.apk",
-    "lang": "en",
-    "code": 48,
-    "version": "14.48",
-    "nsfw": 0,
-    "hasReadme": 0,
-    "hasChangelog": 0,
-    "sources": [
-      {
-        "name": "AsianLoad",
-        "lang": "en",
-        "id": "2063258341485460293",
-        "baseUrl": "https://embasic.pro",
-        "versionId": 1
-      }
-    ]
-  },
-  {
     "name": "Aniyomi: BestDubbedAnime",
     "pkg": "eu.kanade.tachiyomi.animeextension.en.bestdubbedanime",
     "apk": "aniyomi-en.bestdubbedanime-v14.4.apk",
@@ -1934,26 +1914,6 @@
         "lang": "en",
         "id": "6399273548157311628",
         "baseUrl": "https://www.myrunningman.com",
-        "versionId": 1
-      }
-    ]
-  },
-  {
-    "name": "Aniyomi: Aniwave",
-    "pkg": "eu.kanade.tachiyomi.animeextension.en.nineanime",
-    "apk": "aniyomi-en.nineanime-v14.74.apk",
-    "lang": "en",
-    "code": 74,
-    "version": "14.74",
-    "nsfw": 0,
-    "hasReadme": 0,
-    "hasChangelog": 0,
-    "sources": [
-      {
-        "name": "Aniwave",
-        "lang": "en",
-        "id": "98855593379717478",
-        "baseUrl": "https://aniwave.to",
         "versionId": 1
       }
     ]
@@ -3529,26 +3489,6 @@
         "lang": "fr",
         "id": "7657190496536415953",
         "baseUrl": "https://mykdrama.co",
-        "versionId": 1
-      }
-    ]
-  },
-  {
-    "name": "Aniyomi: NekoSama",
-    "pkg": "eu.kanade.tachiyomi.animeextension.fr.nekosama",
-    "apk": "aniyomi-fr.nekosama-v14.11.apk",
-    "lang": "fr",
-    "code": 11,
-    "version": "14.11",
-    "nsfw": 1,
-    "hasReadme": 0,
-    "hasChangelog": 0,
-    "sources": [
-      {
-        "name": "Neko-Sama",
-        "lang": "fr",
-        "id": "5658174401067457058",
-        "baseUrl": "https://animecat.net",
         "versionId": 1
       }
     ]
