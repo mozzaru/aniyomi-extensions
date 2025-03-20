@@ -579,6 +579,26 @@
     ]
   },
   {
+    "name": "Aniyomi: Xvideos",
+    "pkg": "eu.kanade.tachiyomi.animeextension.all.xvideos",
+    "apk": "aniyomi-all.xvideos-v14.3.apk",
+    "lang": "all",
+    "code": 3,
+    "version": "14.3",
+    "nsfw": 1,
+    "hasReadme": 0,
+    "hasChangelog": 0,
+    "sources": [
+      {
+        "name": "Xvideos",
+        "lang": "all",
+        "id": "8016727706963226859",
+        "baseUrl": "https://www.xvideos.com",
+        "versionId": 1
+      }
+    ]
+  },
+  {
     "name": "Aniyomi: Akwam",
     "pkg": "eu.kanade.tachiyomi.animeextension.ar.akwam",
     "apk": "aniyomi-ar.akwam-v14.9.apk",
