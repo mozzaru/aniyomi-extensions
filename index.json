@@ -559,6 +559,26 @@
     ]
   },
   {
+    "name": "Aniyomi: Xnxx",
+    "pkg": "eu.kanade.tachiyomi.animeextension.all.xnxx",
+    "apk": "aniyomi-all.xnxx-v14.3.apk",
+    "lang": "all",
+    "code": 3,
+    "version": "14.3",
+    "nsfw": 0,
+    "hasReadme": 0,
+    "hasChangelog": 0,
+    "sources": [
+      {
+        "name": "Xnxx",
+        "lang": "all",
+        "id": "1853973586604481267",
+        "baseUrl": "https://www.xnxx.com",
+        "versionId": 1
+      }
+    ]
+  },
+  {
     "name": "Aniyomi: Akwam",
     "pkg": "eu.kanade.tachiyomi.animeextension.ar.akwam",
     "apk": "aniyomi-ar.akwam-v14.9.apk",
