@@ -565,7 +565,7 @@
     "lang": "all",
     "code": 3,
     "version": "14.3",
-    "nsfw": 0,
+    "nsfw": 1,
     "hasReadme": 0,
     "hasChangelog": 0,
     "sources": [
