@@ -1,25 +1,20 @@
 | Install on Aniyomi | Install on Anikku | Support Server |
 |--------------------|-------------------|----------------|
-| [![Install](https://img.shields.io/badge/Click%20here%20to%20install%20this%20repo-blue&style=flat)](https://intradeus.github.io/http-protocol-redirector/?r=aniyomi://add-repo?url=https://raw.githubusercontent.com/anikku-app/extensions/repo/index.min.json) | [![Install](https://img.shields.io/badge/Click%20here%20to%20install%20repo-gray?style=flat&labelColor=red)](https://intradeus.github.io/http-protocol-redirector/?r=anikku://add-repo?url=https://raw.githubusercontent.com/anikku-app/extensions/repo/index.min.json) | [![Discord](https://img.shields.io/discord/1242381704459452488?label=discord&labelColor=7289da&color=2c2f33&style=flat)](https://discord.gg/85jB7V5AJR) |
+| [![Install](https://img.shields.io/badge/Click%20here%20to%20install%20this%20repo-blue&style=flat)](https://intradeus.github.io/http-protocol-redirector/?r=aniyomi://add-repo?url=https://raw.githubusercontent.com/zosetsu-repo/ani-repo/repo/index.min.json) | [![Install](https://img.shields.io/badge/Click%20here%20to%20install%20repo-gray?style=flat&labelColor=red)](https://intradeus.github.io/http-protocol-redirector/?r=anikku://add-repo?url=https://raw.githubusercontent.com/zosetsu-repo/ani-repo/repo/index.min.json) | [![Discord](https://img.shields.io/discord/1242381704459452488?label=discord&labelColor=7289da&color=2c2f33&style=flat)](https://discord.gg/85jB7V5AJR) |
 
 ## Guide
 
-just paste this into your anime repo 
+just paste this into your anime repo
+
+```html
+https://raw.githubusercontent.com/zosetsu-repo/ani-repo/repo/index.min.json
 ```
-https://raw.githubusercontent.com/anikku-app/extensions/repo/index.min.json
-```
-
-## Support Server
-
-Join the [Discord](https://discord.gg/85jB7V5AJR) for updates and announcements
-
-and please check the discord BEFORE making an issue
 
 ## Contributing
 
-[Source code](https://github.com/anikku-app/anikku-extensions) and [Template](https://github.com/anikku-app/anikku-extensions/blob/master/CONTRIBUTING.md)
+[Source code](https://github.com/zosetsu-repo/aniyomi-extensions) and [Template](https://github.com/zosetsu-repo/aniyomi-extensions/blob/master/CONTRIBUTING.md)
 
-If you want to report issues, report them [here](https://github.com/anikku-app/anikku-extensions/issues/new/choose)
+If you want to report issues, report them [here](https://github.com/zosetsu-repo/aniyomi-extensions/issues/new/choose)
 
 ## Disclaimer
 
