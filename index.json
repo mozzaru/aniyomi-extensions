@@ -3516,10 +3516,10 @@
   {
     "name": "Aniyomi: AniSAGA",
     "pkg": "eu.kanade.tachiyomi.animeextension.hi.animesaga",
-    "apk": "aniyomi-hi.animesaga-v14.18.apk",
+    "apk": "aniyomi-hi.animesaga-v14.19.apk",
     "lang": "hi",
-    "code": 18,
-    "version": "14.18",
+    "code": 19,
+    "version": "14.19",
     "nsfw": 0,
     "hasReadme": 0,
     "hasChangelog": 0,
