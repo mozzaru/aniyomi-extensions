@@ -403,10 +403,10 @@
   {
     "name": "Aniyomi: RouVideo",
     "pkg": "eu.kanade.tachiyomi.animeextension.all.rouvideo",
-    "apk": "aniyomi-all.rouvideo-v14.7.apk",
+    "apk": "aniyomi-all.rouvideo-v14.8.apk",
     "lang": "all",
-    "code": 7,
-    "version": "14.7",
+    "code": 8,
+    "version": "14.8",
     "nsfw": 1,
     "sources": [
       {
