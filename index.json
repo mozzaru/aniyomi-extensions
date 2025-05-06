@@ -453,6 +453,23 @@
     ]
   },
   {
+    "name": "Aniyomi: Stremio",
+    "pkg": "eu.kanade.tachiyomi.animeextension.all.stremio",
+    "apk": "aniyomi-all.stremio-v14.2.apk",
+    "lang": "all",
+    "code": 2,
+    "version": "14.2",
+    "nsfw": 0,
+    "sources": [
+      {
+        "name": "Stremio",
+        "lang": "all",
+        "id": "8425771932667600381",
+        "baseUrl": "https://app.strem.io/shell-v4.4"
+      }
+    ]
+  },
+  {
     "name": "Aniyomi: Subsplease",
     "pkg": "eu.kanade.tachiyomi.animeextension.all.subsplease",
     "apk": "aniyomi-all.subsplease-v14.3.apk",
