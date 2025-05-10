@@ -1232,10 +1232,10 @@
   {
     "name": "Aniyomi: AniPlay",
     "pkg": "eu.kanade.tachiyomi.animeextension.en.aniplay",
-    "apk": "aniyomi-en.aniplay-v14.26.apk",
+    "apk": "aniyomi-en.aniplay-v14.27.apk",
     "lang": "en",
-    "code": 26,
-    "version": "14.26",
+    "code": 27,
+    "version": "14.27",
     "nsfw": 0,
     "sources": [
       {
@@ -1396,6 +1396,23 @@
         "lang": "en",
         "id": "8733115911403916257",
         "baseUrl": "https://hstream.moe"
+      }
+    ]
+  },
+  {
+    "name": "Aniyomi: JPFilms",
+    "pkg": "eu.kanade.tachiyomi.animeextension.en.jpfilms",
+    "apk": "aniyomi-en.jpfilms-v14.1.apk",
+    "lang": "en",
+    "code": 1,
+    "version": "14.1",
+    "nsfw": 1,
+    "sources": [
+      {
+        "name": "JPFilms",
+        "lang": "en",
+        "id": "865558085806297637",
+        "baseUrl": "https://jp-films.com"
       }
     ]
   },
