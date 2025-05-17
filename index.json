@@ -1062,17 +1062,17 @@
   {
     "name": "Aniyomi: AllAnime",
     "pkg": "eu.kanade.tachiyomi.animeextension.en.allanime",
-    "apk": "aniyomi-en.allanime-v14.38.apk",
+    "apk": "aniyomi-en.allanime-v14.39.apk",
     "lang": "en",
-    "code": 38,
-    "version": "14.38",
+    "code": 39,
+    "version": "14.39",
     "nsfw": 0,
     "sources": [
       {
         "name": "AllAnime",
         "lang": "en",
         "id": "4709139914729853090",
-        "baseUrl": "https://api.allanime.day"
+        "baseUrl": "https://allmanga.to/anime"
       }
     ]
   },
