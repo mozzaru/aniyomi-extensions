@@ -1621,6 +1621,23 @@
     ]
   },
   {
+    "name": "Aniyomi: 9AnimeTV",
+    "pkg": "eu.kanade.tachiyomi.animeextension.en.nineanimetv",
+    "apk": "aniyomi-en.nineanimetv-v14.7.apk",
+    "lang": "en",
+    "code": 7,
+    "version": "14.7",
+    "nsfw": 0,
+    "sources": [
+      {
+        "name": "9AnimeTV",
+        "lang": "en",
+        "id": "1060432665709437790",
+        "baseUrl": "https://9animetv.to"
+      }
+    ]
+  },
+  {
     "name": "Aniyomi: NoobSubs",
     "pkg": "eu.kanade.tachiyomi.animeextension.en.noobsubs",
     "apk": "aniyomi-en.noobsubs-v14.1.apk",
