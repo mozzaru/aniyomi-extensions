@@ -1,8 +1,8 @@
 {
     "meta": {
-      "name": "Yūzōnō",
-      "shortName": "Yūzōnō",
-      "website": "https://github.com/yuzono/aniyomi-extensions",
-      "signingKeyFingerprint": "cbec121aa82ebb02aaa73806992e0368a97d47b5451ed6524816d03084c45905"
+      "name": "mozzaru",
+      "shortName": "mozzaru",
+      "website": "https://github.com/mozzaru/aniyomi-extensions",
+      "signingKeyFingerprint": "318c002b226e0b04f9c56edb0d8e61952fd8eed1930abea55b51601b88d5f591"
     }
   }
