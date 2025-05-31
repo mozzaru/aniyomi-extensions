@@ -33,14 +33,24 @@ class DailymotionExtractor(private val client: OkHttpClient, private val headers
 
     private val playlistUtils by lazy { PlaylistUtils(client, headers) }
 
-    fun videosFromUrl(url: String, prefix: String = "Dailymotion - ", baseUrl: String = "", password: String? = null): List<Video> {
-        val htmlString = client.newCall(GET(url)).execute().body.string()
+    fun videosFromUrl(
+        url: String,
+        prefix: String = "Dailymotion - ",
+        baseUrl: String = "",
+        password: String? = null
+    ): List<Video> {
+        // 🔄 Normalisasi domain mirror
+        val normalizedUrl = url
+            .replace("dailymotionbd.com", "dailymotion.com")
+            .replace("www.dailymotionbd.com", "www.dailymotion.com")
+
+        val htmlString = client.newCall(GET(normalizedUrl)).execute().body.string()
 
         val internalData = htmlString.substringAfter("\"dmInternalData\":").substringBefore("</script>")
         val ts = internalData.substringAfter("\"ts\":").substringBefore(",")
         val v1st = internalData.substringAfter("\"v1st\":\"").substringBefore("\",")
 
-        val videoQuery = url.toHttpUrl().run {
+        val videoQuery = normalizedUrl.toHttpUrl().run {
             queryParameter("video") ?: pathSegments.last()
         }
 
@@ -50,7 +60,7 @@ class DailymotionExtractor(private val client: OkHttpClient, private val headers
         return when {
             parsed.qualities != null && parsed.error == null -> videosFromDailyResponse(parsed, prefix)
             parsed.error?.type == "password_protected" && parsed.id != null -> {
-                videosFromProtectedUrl(url, prefix, parsed.id, htmlString, ts, v1st, baseUrl, password)
+                videosFromProtectedUrl(normalizedUrl, prefix, parsed.id, htmlString, ts, v1st, baseUrl, password)
             }
             else -> emptyList()
         }

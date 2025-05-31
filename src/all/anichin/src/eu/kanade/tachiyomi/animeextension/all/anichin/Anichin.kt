@@ -4,13 +4,14 @@ import androidx.preference.ListPreference
 import androidx.preference.PreferenceScreen
 import eu.kanade.tachiyomi.animeextension.all.anichin.extractors.VidstreamingExtractor
 import eu.kanade.tachiyomi.animeextension.all.anichin.extractors.YouTubeExtractor
-import eu.kanade.tachiyomi.animesource.model.Episode
 import eu.kanade.tachiyomi.animesource.model.Video
 import eu.kanade.tachiyomi.lib.dailymotionextractor.DailymotionExtractor
 import eu.kanade.tachiyomi.lib.doodextractor.DoodExtractor
 import eu.kanade.tachiyomi.lib.gdriveplayerextractor.GdrivePlayerExtractor
 import eu.kanade.tachiyomi.lib.okruextractor.OkruExtractor
 import eu.kanade.tachiyomi.multisrc.animestream.AnimeStream
+import eu.kanade.tachiyomi.network.asJsoup
+import eu.kanade.tachiyomi.source.model.SEpisode
 import okhttp3.Response
 
 class Anichin : AnimeStream(
@@ -47,16 +48,15 @@ class Anichin : AnimeStream(
         }
     }
 
-    // ========================== Episode List Fix ==========================
-    override fun episodeListParse(response: Response): List<Episode> {
+    // ========================== Episode List ==========================
+    override fun episodeListParse(response: Response): List<SEpisode> {
         val document = response.asJsoup()
-        val episodes = mutableListOf<Episode>()
+        val episodes = mutableListOf<SEpisode>()
 
-        // Ambil semua elemen episode dari semua tab/section
         document.select("div.tab-pane, div#content, div#movie").forEach { section ->
             section.select("li.wp-manga-chapter > a").forEach { element ->
                 episodes.add(
-                    Episode.create().apply {
+                    SEpisode.create().apply {
                         setUrlWithoutDomain(element.attr("href"))
                         name = element.text().trim()
                     },
@@ -68,7 +68,7 @@ class Anichin : AnimeStream(
         if (episodes.isEmpty()) {
             document.select("li.wp-manga-chapter > a").forEach { element ->
                 episodes.add(
-                    Episode.create().apply {
+                    SEpisode.create().apply {
                         setUrlWithoutDomain(element.attr("href"))
                         name = element.text().trim()
                     },
@@ -81,7 +81,7 @@ class Anichin : AnimeStream(
 
     // ============================== Settings ==============================
     override fun setupPreferenceScreen(screen: PreferenceScreen) {
-        super.setupPreferenceScreen(screen) // Quality preferences
+        super.setupPreferenceScreen(screen)
 
         ListPreference(screen.context).apply {
             key = PREF_LANG_KEY
