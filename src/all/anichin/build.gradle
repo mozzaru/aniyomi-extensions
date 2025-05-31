@@ -1,0 +1,17 @@
+ext {
+    extName = 'Anichin'
+    extClass = '.Anichin'
+    themePkg = 'animestream'
+    baseUrl = 'https://anichin.club'
+    overrideVersionCode = 2
+}
+
+apply from: "$rootDir/common.gradle"
+
+dependencies {
+    implementation(project(':lib:dailymotion-extractor'))
+    implementation(project(':lib:okru-extractor'))
+    implementation(project(':lib:gdriveplayer-extractor'))
+    implementation(project(':lib:dood-extractor'))
+    implementation(libs.jsunpacker)
+}
