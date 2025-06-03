@@ -3,7 +3,7 @@ ext {
     extClass = '.Anichin'
     themePkg = 'animestream'
     baseUrl = 'https://anichin.club'
-    overrideVersionCode = 2
+    overrideVersionCode = 3
 }
 
 apply from: "$rootDir/common.gradle"

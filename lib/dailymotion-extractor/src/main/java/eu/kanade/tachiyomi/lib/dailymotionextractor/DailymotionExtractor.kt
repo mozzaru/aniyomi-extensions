@@ -30,29 +30,44 @@ class DailymotionExtractor(private val client: OkHttpClient, private val headers
         .build()
 
     private val json: Json by injectLazy()
-
     private val playlistUtils by lazy { PlaylistUtils(client, headers) }
 
     fun videosFromUrl(url: String, prefix: String = "Dailymotion - ", baseUrl: String = "", password: String? = null): List<Video> {
-        val htmlString = client.newCall(GET(url)).execute().body.string()
+        try {
+            println("🔍 Fetching HTML from Dailymotion URL: $url")
+            val htmlString = client.newCall(GET(url)).execute().body.string()
 
-        val internalData = htmlString.substringAfter("\"dmInternalData\":").substringBefore("</script>")
-        val ts = internalData.substringAfter("\"ts\":").substringBefore(",")
-        val v1st = internalData.substringAfter("\"v1st\":\"").substringBefore("\",")
+            val internalData = htmlString.substringAfter("\"dmInternalData\":").substringBefore("</script>")
+            val ts = internalData.substringAfter("\"ts\":").substringBefore(",")
+            val v1st = internalData.substringAfter("\"v1st\":\"").substringBefore("\",")
 
-        val videoQuery = url.toHttpUrl().run {
-            queryParameter("video") ?: pathSegments.last()
-        }
-
-        val jsonUrl = "$DAILYMOTION_URL/player/metadata/video/$videoQuery?locale=en-US&dmV1st=$v1st&dmTs=$ts&is_native_app=0"
-        val parsed = client.newCall(GET(jsonUrl)).execute().parseAs<DailyQuality>()
-
-        return when {
-            parsed.qualities != null && parsed.error == null -> videosFromDailyResponse(parsed, prefix)
-            parsed.error?.type == "password_protected" && parsed.id != null -> {
-                videosFromProtectedUrl(url, prefix, parsed.id, htmlString, ts, v1st, baseUrl, password)
+            val videoQuery = url.toHttpUrl().run {
+                queryParameter("video") ?: pathSegments.last()
             }
-            else -> emptyList()
+
+            println("🎯 Video ID extracted: $videoQuery")
+
+            val jsonUrl = "$DAILYMOTION_URL/player/metadata/video/$videoQuery?locale=en-US&dmV1st=$v1st&dmTs=$ts&is_native_app=0"
+            println("🌐 Fetching metadata JSON: $jsonUrl")
+
+            val parsed = client.newCall(GET(jsonUrl)).execute().parseAs<DailyQuality>()
+            println("📦 Parsed response: ${parsed.id}, error=${parsed.error?.type}")
+
+            return when {
+                parsed.qualities != null && parsed.error == null -> videosFromDailyResponse(parsed, prefix)
+                parsed.error?.type == "password_protected" && parsed.id != null -> {
+                    println("🔐 Video is password protected. Trying alternate flow...")
+                    videosFromProtectedUrl(url, prefix, parsed.id, htmlString, ts, v1st, baseUrl, password)
+                }
+                else -> {
+                    println("❌ No playable video found or unknown error.")
+                    emptyList()
+                }
+            }
+        } catch (e: Exception) {
+            println("❗ Exception while fetching video: ${e.message}")
+            e.printStackTrace()
+            return emptyList()
         }
     }
 
@@ -66,64 +81,87 @@ class DailymotionExtractor(private val client: OkHttpClient, private val headers
         baseUrl: String,
         password: String?,
     ): List<Video> {
-        val postUrl = "$GRAPHQL_URL/oauth/token"
-        val clientId = htmlString.substringAfter("client_id\":\"").substringBefore('"')
-        val clientSecret = htmlString.substringAfter("client_secret\":\"").substringBefore('"')
-        val scope = htmlString.substringAfter("client_scope\":\"").substringBefore('"')
+        try {
+            println("🔐 Performing password-protected video flow...")
 
-        val tokenBody = FormBody.Builder()
-            .add("client_id", clientId)
-            .add("client_secret", clientSecret)
-            .add("traffic_segment", ts)
-            .add("visitor_id", v1st)
-            .add("grant_type", "client_credentials")
-            .add("scope", scope)
-            .build()
+            val postUrl = "$GRAPHQL_URL/oauth/token"
+            val clientId = htmlString.substringAfter("client_id\":\"").substringBefore('"')
+            val clientSecret = htmlString.substringAfter("client_secret\":\"").substringBefore('"')
+            val scope = htmlString.substringAfter("client_scope\":\"").substringBefore('"')
 
-        val tokenResponse = client.newCall(POST(postUrl, headersBuilder(), tokenBody)).execute()
-        val tokenParsed = tokenResponse.parseAs<TokenResponse>()
+            println("🔑 Getting access token with client_id=$clientId")
 
-        val idUrl = "$GRAPHQL_URL/"
-        val idHeaders = headersBuilder {
-            set("Accept", "application/json, text/plain, */*")
-            add("Authorization", "${tokenParsed.token_type} ${tokenParsed.access_token}")
-        }
+            val tokenBody = FormBody.Builder()
+                .add("client_id", clientId)
+                .add("client_secret", clientSecret)
+                .add("traffic_segment", ts)
+                .add("visitor_id", v1st)
+                .add("grant_type", "client_credentials")
+                .add("scope", scope)
+                .build()
 
-        val idData = """
-            {
-               "query":"query playerPasswordQuery(${'$'}videoId:String!,${'$'}password:String!){video(xid:${'$'}videoId,password:${'$'}password){id xid}}",
-               "variables":{
-                  "videoId":"$videoId",
-                  "password":"$password"
-               }
+            val tokenParsed = client.newCall(POST(postUrl, headersBuilder(), tokenBody)).execute()
+                .parseAs<TokenResponse>()
+
+            println("✅ Token received: ${tokenParsed.token_type} ${tokenParsed.access_token}")
+
+            val idHeaders = headersBuilder {
+                set("Accept", "application/json, text/plain, */*")
+                add("Authorization", "${tokenParsed.token_type} ${tokenParsed.access_token}")
             }
-        """.trimIndent().toRequestBody("application/json".toMediaType())
 
-        val idResponse = client.newCall(POST(idUrl, idHeaders, idData)).execute()
-        val idParsed = idResponse.parseAs<ProtectedResponse>().data.video
+            val idData = """
+                {
+                   "query":"query playerPasswordQuery(${'$'}videoId:String!,${'$'}password:String!){video(xid:${'$'}videoId,password:${'$'}password){id xid}}",
+                   "variables":{
+                      "videoId":"$videoId",
+                      "password":"$password"
+                   }
+                }
+            """.trimIndent().toRequestBody("application/json".toMediaType())
 
-        val dmvk = htmlString.substringAfter("\"dmvk\":\"").substringBefore('"')
-        val getVideoIdUrl = "$DAILYMOTION_URL/player/metadata/video/${idParsed.xid}?embedder=${"$baseUrl/"}&locale=en-US&dmV1st=$v1st&dmTs=$ts&is_native_app=0"
-        val getVideoIdHeaders = headersBuilder {
-            add("Cookie", "dmvk=$dmvk; ts=$ts; v1st=$v1st; usprivacy=1---; client_token=${tokenParsed.access_token}")
-            set("Referer", url)
+            println("🔎 Fetching protected video metadata...")
+
+            val idParsed = client.newCall(POST(GRAPHQL_URL, idHeaders, idData)).execute()
+                .parseAs<ProtectedResponse>().data.video
+
+            println("🎬 Real video ID: ${idParsed.xid}")
+
+            val dmvk = htmlString.substringAfter("\"dmvk\":\"").substringBefore('"')
+
+            val getVideoIdUrl = "$DAILYMOTION_URL/player/metadata/video/${idParsed.xid}?embedder=${"$baseUrl/"}&locale=en-US&dmV1st=$v1st&dmTs=$ts&is_native_app=0"
+
+            val getVideoIdHeaders = headersBuilder {
+                add("Cookie", "dmvk=$dmvk; ts=$ts; v1st=$v1st; usprivacy=1---; client_token=${tokenParsed.access_token}")
+                set("Referer", url)
+            }
+
+            val parsed = client.newCall(GET(getVideoIdUrl, getVideoIdHeaders)).execute()
+                .parseAs<DailyQuality>()
+
+            return videosFromDailyResponse(parsed, prefix, getVideoIdHeaders)
+        } catch (e: Exception) {
+            println("❗ Error fetching protected video: ${e.message}")
+            e.printStackTrace()
+            return emptyList()
         }
-
-        val parsed = client.newCall(GET(getVideoIdUrl, getVideoIdHeaders)).execute()
-            .parseAs<DailyQuality>()
-
-        return videosFromDailyResponse(parsed, prefix, getVideoIdHeaders)
     }
 
     private fun videosFromDailyResponse(parsed: DailyQuality, prefix: String, playlistHeaders: Headers? = null): List<Video> {
         val masterUrl = parsed.qualities?.auto?.firstOrNull()?.url
-            ?: return emptyList<Video>()
+        if (masterUrl == null) {
+            println("⚠️ Master URL missing in qualities.")
+            return emptyList()
+        }
 
         val subtitleList = parsed.subtitles?.data?.map {
+            println("📝 Subtitle track: ${it.label} -> ${it.urls.firstOrNull()}")
             Track(it.urls.first(), it.label)
-        } ?: emptyList<Track>()
+        } ?: emptyList()
 
         val masterHeaders = playlistHeaders ?: headersBuilder()
+
+        println("📡 Extracting HLS playlist from: $masterUrl")
 
         return playlistUtils.extractFromHls(
             masterUrl,
