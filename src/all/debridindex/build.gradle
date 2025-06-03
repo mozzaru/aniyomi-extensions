@@ -1,9 +1,0 @@
-ext {
-    extKmkVersionCode = 0
-    extName = 'Debrid Index'
-    extClass = '.DebridIndex'
-    extVersionCode = 1
-    isNsfw = false
-}
-
-apply from: "$rootDir/common.gradle"

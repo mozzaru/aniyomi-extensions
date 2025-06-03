@@ -1,8 +1,0 @@
-ext {
-    extKmkVersionCode = 0
-    extName = 'UHD Movies'
-    extClass = '.UHDMovies'
-    extVersionCode = 19
-}
-
-apply from: "$rootDir/common.gradle"

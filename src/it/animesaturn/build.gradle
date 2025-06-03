@@ -1,8 +1,0 @@
-ext {
-    extKmkVersionCode = 0
-    extName = 'Anime Saturn'
-    extClass = '.AnimeSaturn'
-    extVersionCode = 10
-}
-
-apply from: "$rootDir/common.gradle"

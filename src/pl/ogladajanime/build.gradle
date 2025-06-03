@@ -1,9 +1,0 @@
-ext {
-    extKmkVersionCode = 0
-    extName = 'OgladajAnime'
-    extClass = '.OgladajAnime'
-    extVersionCode = 4
-    isNsfw = true
-}
-
-apply from: "$rootDir/common.gradle"

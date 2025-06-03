@@ -1,8 +1,0 @@
-ext {
-    extKmkVersionCode = 0
-    extName = 'Animeiat'
-    extClass = '.Animeiat'
-    extVersionCode = 1
-}
-
-apply from: "$rootDir/common.gradle"
