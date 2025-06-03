@@ -2,7 +2,6 @@ package eu.kanade.tachiyomi.animeextension.all.anichin
 
 import androidx.preference.ListPreference
 import androidx.preference.PreferenceScreen
-import eu.kanade.tachiyomi.animeextension.all.anichin.extractors.VidstreamingExtractor
 import eu.kanade.tachiyomi.animesource.model.Video
 import eu.kanade.tachiyomi.lib.dailymotionextractor.DailymotionExtractor
 import eu.kanade.tachiyomi.multisrc.animestream.AnimeStream
@@ -16,14 +15,21 @@ class Anichin : AnimeStream(
 
     // ============================ Video Links =============================
     private val dailymotionExtractor: DailymotionExtractor by lazy { DailymotionExtractor(client, headers) }
-    private val vidstreamingExtractor: VidstreamingExtractor by lazy { VidstreamingExtractor(client) }
 
     override fun getVideoList(url: String, name: String): List<Video> {
         val prefix = "$name - "
+        println("🔍 URL: $url")
+
         return when {
-            url.contains("dailymotion") -> dailymotionExtractor.videosFromUrl(url, prefix)
-            url.contains("vidstreaming") -> vidstreamingExtractor.videosFromUrl(url, prefix)
-            else -> emptyList()
+            url.contains("dailymotion") -> {
+                val videos = dailymotionExtractor.videosFromUrl(url, prefix)
+                println("🎥 Dailymotion found: ${videos.size} videos")
+                videos
+            }
+            else -> {
+                println("⚠️ No matching extractor for URL: $url")
+                emptyList()
+            }
         }
     }
 
