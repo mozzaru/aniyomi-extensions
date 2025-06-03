@@ -2,16 +2,16 @@
   {
     "name": "Aniyomi: Anichin",
     "pkg": "eu.kanade.tachiyomi.animeextension.all.anichin",
-    "apk": "aniyomi-all.anichin-v14.12.apk",
+    "apk": "aniyomi-all.anichin-v14.4.apk",
     "lang": "all",
-    "code": 12,
-    "version": "14.12",
+    "code": 4,
+    "version": "14.4",
     "nsfw": 0,
     "sources": [
       {
         "name": "Anichin",
         "lang": "all",
-        "id": "4620219025406449665",
+        "id": "4620219025406449666",
         "baseUrl": "https://anichin.club"
       }
     ]
